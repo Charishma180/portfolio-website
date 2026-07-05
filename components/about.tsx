@@ -58,27 +58,10 @@ export function About() {
               variants={itemVariants}
               className="text-lg text-foreground/80 leading-9"
             >
-              I am a Computer Science and Engineering (Data Science) student with
-              a strong passion for Artificial Intelligence, Machine Learning, and
-              Data Analytics. I enjoy transforming data into meaningful insights
-              and building practical solutions that solve real-world challenges.
-              My learning journey is driven by curiosity, consistency, and a
-              desire to continuously improve my technical and analytical skills.
+             'm Charishma Pillapalem, a Computer Science student with a strong interest in Data Science, AI, and Full Stack Development. I enjoy solving real-world problems through technology and continuously learning new skills while building impactful projects.
             </motion.p>
 
-            <motion.p
-              variants={itemVariants}
-              className="text-lg text-foreground/80 leading-9"
-            >
-              Alongside academics, I actively participate in internships,
-              hands-on projects, technical communities, and continuous learning
-              opportunities to strengthen my practical knowledge. Whether it is
-              developing modern web applications or exploring AI-driven
-              technologies, I believe in learning by building. My long-term goal
-              is to become a skilled Data Scientist who creates innovative,
-              impactful, and data-driven solutions that make a meaningful
-              difference.
-            </motion.p>
+            
           </motion.div>
 
           {/* Right Card */}

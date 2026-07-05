@@ -95,7 +95,8 @@ export function Hero() {
           variants={itemVariants}
           className="text-lg md:text-xl text-foreground/70 leading-8 max-w-3xl mx-auto mb-12"
         >
-         Passionate about Data Science, Machine Learning, and AI building practical solutions through continuous learning and real-world projects.
+        Passionate about transforming data into insights and building intelligent solutions...
+    
         </motion.p>
 
         {/* Buttons */}
