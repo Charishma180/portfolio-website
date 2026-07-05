@@ -2,37 +2,35 @@
 
 import { motion } from 'framer-motion'
 import { Code, ExternalLink } from 'lucide-react'
+import Image from "next/image"
 
 const projects = [
   {
     id: 1,
     title: 'Amarism – Educational Platform',
-    description:
-      'A modern educational platform developed to showcase Amarism initiatives, learning resources, and programs. Designed with a clean, responsive interface focused on accessibility and user experience.',
+    image: '/amarism.png',
+    description: '...',
     tags: ['Next.js', 'React', 'Tailwind CSS', 'TypeScript'],
     github: 'https://github.com/Charishma180',
     live: '#',
-    initials: 'AM',
   },
   {
     id: 2,
     title: 'College Document Management System',
-    description:
-      'A secure document management system built to simplify academic document handling with role-based access, organized records, and an intuitive user interface.',
+    image: '/cdms.png',
+    description: '...',
     tags: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
     github: 'https://github.com/Charishma180',
     live: '#',
-    initials: 'CDMS',
   },
   {
     id: 3,
     title: 'CineBook',
-    description:
-      'A movie discovery application developed as a Data Science project, providing an engaging interface for exploring movies while applying data-driven concepts.',
+    image: '/cinebook.png',
+    description: '...',
     tags: ['React', 'JavaScript', 'Python'],
     github: 'https://github.com/Charishma180',
     live: '#',
-    initials: 'CB',
   },
 ]
 
@@ -102,16 +100,14 @@ export function Projects() {
               className="glass rounded-3xl overflow-hidden border border-primary/10 hover:border-primary/40 transition-all duration-300 group"
             >
               {/* Project Banner */}
-              <div className="relative h-48 flex items-center justify-center bg-gradient-to-br from-primary/20 to-primary/5 overflow-hidden">
-
-                <div className="absolute w-44 h-44 rounded-full bg-primary/10 blur-3xl" />
-
-                <span className="text-5xl font-bold text-primary/70 tracking-widest z-10">
-                  {project.initials}
-                </span>
-
-              </div>
-
+             <div className="relative h-52 overflow-hidden">
+ <Image
+  src="/placeholder.jpg"
+  alt={project.title}
+  fill
+  className="object-cover group-hover:scale-105 transition duration-500"
+/>
+</div>
               <div className="p-7">
 
                 <h3 className="text-2xl font-semibold mb-4">

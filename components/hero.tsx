@@ -3,8 +3,9 @@
 import { motion } from 'framer-motion'
 import { ArrowDown } from 'lucide-react'
 import Image from 'next/image'
-
+import { useState } from "react"
 export function Hero() {
+  const [openImage, setOpenImage] = useState(false)
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -44,22 +45,25 @@ export function Hero() {
         animate="visible"
         className="text-center max-w-5xl"
       >
-        {/* Profile */}
-        <motion.div
-          variants={itemVariants}
-          className="mb-8 flex justify-center"
-        >
-          <div className="glass p-2 rounded-full">
-            <Image
-              src="/profile.png"
-              alt="Charishma Pillapalem"
-              width={220}
-              height={220}
-              priority
-              className="rounded-full object-cover w-44 h-44 md:w-56 md:h-56"
-            />
-          </div>
-        </motion.div>
+      {/* Profile */}
+<motion.div
+  variants={itemVariants}
+  className="mb-8 flex justify-center"
+>
+  <div
+    className="glass p-2 rounded-full cursor-pointer"
+    onClick={() => setOpenImage(true)}
+  >
+    <Image
+      src="/portfolio.jpeg"
+      alt="Charishma Pillapalem"
+      width={220}
+      height={220}
+      priority
+      className="rounded-full object-cover object-[center_15%] w-44 h-44 md:w-56 md:h-56 hover:scale-105 transition duration-300"
+    />
+  </div>
+</motion.div>
 
         {/* Badge */}
         <motion.div variants={itemVariants} className="mb-6">
@@ -112,8 +116,8 @@ export function Hero() {
             href="/resume.pdf"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.96 }}
-            className="border border-primary text-primary px-8 py-3 rounded-lg font-semibold hover:bg-primary/10 transition-all"
-          >
+            className="gradient-gold text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:shadow-xl hover:shadow-primary/30 transition-all"
+>
             Download Resume
           </motion.a>
         </motion.div>
@@ -132,6 +136,28 @@ export function Hero() {
           <ArrowDown className="text-primary" size={30} />
         </motion.div>
       </motion.div>
+      {openImage && (
+  <div
+    className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
+    onClick={() => setOpenImage(false)}
+  >
+    <button
+  onClick={() => setOpenImage(false)}
+  className="absolute top-6 right-6 text-white text-4xl hover:text-primary"
+>
+  ×
+</button>
+    <Image
+      src="/portfolio.jpeg"
+      alt="Charishma Pillapalem"
+      width={600}
+      height={600}
+       onClick={(e) => e.stopPropagation()}
+      className="rounded-2xl max-w-[90%] max-h-[90%] object-contain"
+    />
+  </div>
+)}
+
     </section>
   )
 }
